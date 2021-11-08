@@ -59,7 +59,8 @@ class PDFViewer extends React.Component {
       hideNavbar,
       navigation,
       css,
-      onDocumentClick
+      onDocumentClick,
+      style
     } = this.props;
 
     const {
@@ -99,7 +100,7 @@ class PDFViewer extends React.Component {
     }
 
     return (
-      <div className={css ? css : 'mgrpdf__wrapper'} style={mgrpdfStyles.wrapper}>
+      <div className={css ? css : 'mgrpdf__wrapper'} style={{...mgrpdfStyles.wrapper, ...style}}>
         <div onClick={onDocumentClick}>
           {pdf}
         </div>
