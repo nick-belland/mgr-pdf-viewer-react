@@ -31,6 +31,8 @@ class PDFViewer extends React.Component {
     this.setState({
       pages
     });
+    
+    this.props.onDocumentComplete(pages);
   }
 
   handlePrevClick = () => {
